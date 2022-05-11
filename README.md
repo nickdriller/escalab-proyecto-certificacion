@@ -32,3 +32,12 @@ Tienen 2 opciones, utilizando las formas ya vistas: `API Context + hooks` o `Red
 1. Comienzo Proyecto: viernes 9 de abril
 2. Fecha de entrega: **lunes 23 de mayo hasta las 00:00**
 3. Se aprueba con un **73%**, el cual equivale a una nota 5.0
+
+---
+
+#### Dependecias instaladas
+1. `react-router-dom@5.3.0`
+2. `node-sass@6.0.1`
+3. `apexcharts@3.35.2`
+4. `react-apexcharts@1.4.0`
+5. `styled-components@5.3.5`

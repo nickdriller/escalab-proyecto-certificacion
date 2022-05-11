@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap')
+
+$font: 'Poppins'
+$font-stack: $font, 'Roboto', 'Helvetica Nue', 'Arial', sans-serif
+$color-primario: #237fff
+$color-cta: #ff4704
+  
+*
+  margin: 0
+  box-sizing: border-box
+
+html
+  font-size: 16px
+
+body
+  font-family: $font-stack
+  line-height: 1.5
+  -webkit-text-size-adjust: 100%
+  background: #f2f7fc
+  font-size: 0.85rem
+  color: #3b3b3b
+  font-weight: 400
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+
+img
+  max-width: 100%
+  height: auto
+  display: block
+  
+a
+  color: $color-primario
+  font-weight: 600
+  text-decoration: underline
+  cursor: pointer
+  transition: all ease .5s
+
+  &:hover
+    color: darken($color-primario, 10%)
+    text-decoration: none
+    outline: none
+  &:active
+    outline: none
+
+
+b,
+strong
+  font-weight: 600
+  color: inherit
+
+button
+  background: transparent
+  border: 0
+  
+ul
+  list-style: none
+  padding-left: 0
+
+li
+  line-height: 1.5rem
+  
+em
+  color: inherit
+  font-weight: 600
+
+ins 
+  text-decoration: none
+
+q
+  font-style: italic
+
+small
+  display: inline-block
+  font-size: 80%
+
+sub,
+sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+sub
+  bottom: -0.25em
+
+svg
+  width: 100%
+  height: auto
+  
+hr
+  overflow: visible
+  margin: 24px 0
+  border: 0
+  border-top: 1px solid #EAEAEA
+
+video
+  width: 100%
+  height: auto
+  margin: 0 auto
+  border-radius: 24px
+
+p,
+ul,
+ol,
+dl,
+pre,
+address,
+fieldset,
+figure
+  margin: 0
+
+input
+  text-transform: none
+  
+input[type=number]
+  -moz-appearance: textfield
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+button:disabled
+  cursor: not-allowed
+
+svg
+  width: 100%
+  height: auto
+
+.contenedor
+  display: flex
+  main
+    margin-left: auto
+    width: calc( 100% - 60px )
+    transition: width ease-in-out .25s
+    @media screen and ( min-width: 992px )
+      width: calc( 100% - 230px )
+      
+.container
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  // @media screen and (min-width: 576px) 
+  //   max-width: 540px
+  // @media screen and (min-width: 768px) 
+  //   max-width: 720px
+  // @media screen and (min-width: 992px) 
+  //   max-width: 960px
+  // @media screen and (min-width: 1200px) 
+  //   max-width: 1140px
+  
+.row 
+  display: flex
+  flex-wrap: wrap
+  margin-right: -15px
+  margin-left: -15px
+
+.row--no-gutters 
+  margin-right: 0
+  margin-left: 0
+  > [class*="col-"] 
+    padding-right: 0
+    padding-left: 0
+
+[class*="col-"]
+  position: relative
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+
+@media screen and (min-width: 576px) 
+  .col-sm-1 
+    flex: 0 0 8.333333%
+    max-width: 8.333333%
+  
+  .col-sm-2 
+    flex: 0 0 16.666667%
+    max-width: 16.666667%
+  
+  .col-sm-3 
+    flex: 0 0 25%
+    max-width: 25%
+  
+  .col-sm-4 
+    flex: 0 0 33.333333%
+    max-width: 33.333333%
+  
+  .col-sm-5 
+    flex: 0 0 41.666667%
+    max-width: 41.666667%
+  
+  .col-sm-6 
+    flex: 0 0 50%
+    max-width: 50%
+  
+  .col-sm-7 
+    flex: 0 0 58.333333%
+    max-width: 58.333333%
+  
+  .col-sm-8 
+    flex: 0 0 66.666667%
+    max-width: 66.666667%
+  
+  .col-sm-9 
+    flex: 0 0 75%
+    max-width: 75%
+  
+  .col-sm-10 
+    flex: 0 0 83.333333%
+    max-width: 83.333333%
+  
+  .col-sm-11 
+    flex: 0 0 91.666667%
+    max-width: 91.666667%
+  
+  .col-sm-12 
+    flex: 0 0 100%
+    max-width: 100%
+  
