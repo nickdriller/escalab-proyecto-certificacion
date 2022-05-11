@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+### Proyecto Certificación - Reactjs Generación 9
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Detalle:
+El proyecto final como ha sido en las últimas ediciones, es libre, por tanto, la `API` que decidan consumir es a total libertad pero no puede ser ninguna de las que hemos ocupado en el curso). 
 
-## Available Scripts
+Tienen 2 opciones, utilizando las formas ya vistas: `API Context + hooks` o `Redux + hooks`, como a ustedes les acomode más.
 
-In the project directory, you can run:
+#### Se evaluará:
+1. Conexión y consumo de `APIs`. Las llamadas pueden ser con `fetch` o `axios` **(15%)**
+2. Creación de rutas + navegación + lazy loading para optimizar las cargas **(15%)**
+3. `Readme` con la explicación del patrón de arquitectura utilizado, patrones de diseños utilizados y descripción del proyecto **(2%)**
+4. Aplicar Arquitectura limpia basada en patrones de arquitecturas vistos en el curso y buenas prácticas de `Code Splitting` (clean arquitecture, `webpack`, `babel`, `lazy loading` y `error boundary`) **(30%)**
+5. Aplicar algunos patrones de diseños aplicados en el curso **(5%)**
+6. Implementación de página not found 404  **(3%)**
+7. Aplicar el uso de `hooks` y ciclos de vida basado en componentes funcionales **(10%)**
+8. Creación de algunos `custom hooks` **(5%)**
+9. Utilización de `Prop-Types` en por lo menos 3 componentes **(2%)**
+10. Despliegue en producción en Vercel **(3%)**
+11. La UI la pueden implementar como mas les acomode y crear el `responsive design` **(8%)**
 
-### `npm start`
+#### Investigar e integrar
+12. Investigar y aplicar el `HOC` de `ErrorBoundary` (límites de error) a su proyecto que es parte de `Code Splitting` con la opción de recovery hacia la página principal de su proyecto (Parte del punto 4)
+13. Investigar y crear algunos componentes con `Styled Components` **(2%)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Entregables
+1. Link del repositorio + link a producción
+2. Nombre completo y rut
+3. Enviar a mi correo: `mchamorro@escalab.academy` con asunto "Envío proyecto final - Gen-9 React.js"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Fechas
+1. Comienzo Proyecto: viernes 9 de abril
+2. Fecha de entrega: **lunes 23 de mayo hasta las 00:00**
+3. Se aprueba con un **73%**, el cual equivale a una nota 5.0
