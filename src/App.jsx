@@ -1,7 +1,8 @@
 import React from 'react'
+import Menu from './layout/Menu/Menu'
 
 const App = () => (
-  <h1>App component</h1>
+  <Menu />
 )
 
 export default App
