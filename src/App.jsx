@@ -1,8 +1,5 @@
-import React from 'react'
-import Menu from './layout/Menu/Menu'
+import routes from './routes/routes'
 
-const App = () => (
-  <Menu />
-)
+const App = () => routes
 
 export default App
