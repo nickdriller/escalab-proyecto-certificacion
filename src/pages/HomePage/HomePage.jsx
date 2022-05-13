@@ -1,5 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Header from './Header'
+import Hero from './Hero'
 
-const HomePage = () => <h1>HomePage</h1>
+
+const HomePage = () => (
+  <Fragment>
+    <Header />
+    <Hero />
+  </Fragment>
+)
 
 export default HomePage
