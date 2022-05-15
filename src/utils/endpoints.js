@@ -7,7 +7,7 @@ const ORDER_DIRECTION = '&orderDirection='
 const LIMIT= '&limit='
 const OFFSET = '&offset=0'
 
-const API_KEY = '6b9d7a874emsh971d0bc0fb59961p139e4bjsn514e6d66d5da'
+const API_KEY = process.env.REACT_APP_API_KEY
 const HOST_KEY = 'coinranking1.p.rapidapi.com'
 const REQUEST_OPTIONS = {
 	method: 'GET',
