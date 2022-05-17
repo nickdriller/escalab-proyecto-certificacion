@@ -1,13 +1,11 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useContext } from 'react'
 import Input from '../../components/Input/Input'
 import Button from '../../components/Button/Button'
-
-import { auth } from '../../utils/firebase'
-import { GoogleSignIn } from '../../utils/firebase'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-
+import UserAuthenticationContext from '../../contexts/UserAuthenticationContext'
 
 const LoginPage = () => {
+
+  const {userLogInWithMail, userLogInWithGoogle} = useContext(UserAuthenticationContext)
 
   const [inputFields, setInputFields] = useState({
     email: '',
@@ -21,11 +19,10 @@ const LoginPage = () => {
     ))
   }
 
-  
   async function onFormSubmit(event) {
     event.preventDefault()
     try{
-      const user = await signInWithEmailAndPassword(auth, inputFields.email, inputFields.password)
+      const user = await userLogInWithMail(inputFields.email, inputFields.password)
       console.log(user)
       setInputFields({
         email: '',
@@ -39,7 +36,7 @@ const LoginPage = () => {
 
   function onGoogleSigIn(event){
     event.preventDefault()
-    GoogleSignIn()
+    userLogInWithGoogle()
   }
 
   return (

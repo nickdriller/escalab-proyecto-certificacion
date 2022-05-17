@@ -1,13 +1,14 @@
-import React, {Fragment, useState} from 'react'
+import React, {Fragment, useState, useContext} from 'react'
 import Input from '../../components/Input/Input'
 import Button from '../../components/Button/Button'
-
-import { auth } from '../../utils/firebase'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-
-import { GoogleSignIn } from '../../utils/firebase'
+import UserAuthenticationContext from '../../contexts/UserAuthenticationContext'
+import { useHistory } from 'react-router-dom'
 
 const SignUpPage = () => {
+
+  const history = useHistory()
+
+  const {userSignUp, userLogInWithGoogle} = useContext(UserAuthenticationContext)
 
   const [inputFields, setInputFields] = useState({
     email: '',
@@ -29,8 +30,9 @@ const SignUpPage = () => {
       return
     }
     try{
-      const user = await createUserWithEmailAndPassword(auth, inputFields.email, inputFields.password )
+      const user = await userSignUp(inputFields.email, inputFields.password )
       console.log('user', user)
+      history.push('/')
       setInputFields({
         email: '',
         password: '',
@@ -38,13 +40,12 @@ const SignUpPage = () => {
       })
     } catch(error) {
       console.log(error.message)
-
     }
   }
 
   function onGoogleSigIn(event){
     event.preventDefault()
-    GoogleSignIn()
+    userLogInWithGoogle()
   }
 
   return (
