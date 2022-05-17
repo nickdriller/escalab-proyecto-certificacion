@@ -1,9 +1,12 @@
 import React, { Fragment, useState, useContext } from 'react'
 import Input from '../../components/Input/Input'
 import Button from '../../components/Button/Button'
+import { useHistory } from 'react-router-dom'
 import UserAuthenticationContext from '../../contexts/UserAuthenticationContext'
 
 const LoginPage = () => {
+
+  const history = useHistory()
 
   const {userLogInWithMail, userLogInWithGoogle} = useContext(UserAuthenticationContext)
 
@@ -23,7 +26,7 @@ const LoginPage = () => {
     event.preventDefault()
     try{
       const user = await userLogInWithMail(inputFields.email, inputFields.password)
-      console.log(user)
+      history.push('/')
       setInputFields({
         email: '',
         password: ''

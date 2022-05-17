@@ -3,16 +3,26 @@ import HomePage from '../pages/HomePage/HomePage'
 import LoginPage from '../pages/LoginPage/LoginPage'
 import SignUpPage from '../pages/SignUpPage/SignUpPage'
 import FourOhFourPage from '../pages/404Page/404Page'
+import UserAuthenticationContext from '../contexts/UserAuthenticationContext'
+import React, { Fragment, useContext } from 'react'
 
-const routes = (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path='/' component={HomePage}/>
-      <Route path='/login' component={LoginPage}/>
-      <Route path='/sign-up' component={SignUpPage}/>
-      <Route path='*' component={FourOhFourPage} />
-    </Switch>
-  </BrowserRouter>
-)
+const Routes = () => {
+  const {user} = useContext(UserAuthenticationContext)
+  return(
+    <BrowserRouter>
+      <Switch>
+        
+        <Route exact path='/' component={HomePage}/>
+        {!user && 
+          <Fragment>
+            <Route path='/login' component={LoginPage}/>
+            <Route path='/sign-up' component={SignUpPage}/>
+          </Fragment>
+        }
+        <Route path='*' component={FourOhFourPage} />
+      </Switch>
+    </BrowserRouter>
+  )
+}
 
-export default routes
+export default Routes
