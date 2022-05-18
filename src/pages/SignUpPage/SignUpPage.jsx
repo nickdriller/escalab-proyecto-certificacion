@@ -30,8 +30,7 @@ const SignUpPage = () => {
       return
     }
     try{
-      const user = await userSignUp(inputFields.email, inputFields.password )
-      console.log('user', user)
+      await userSignUp(inputFields.email, inputFields.password )
       history.push('/')
       setInputFields({
         email: '',
@@ -46,6 +45,8 @@ const SignUpPage = () => {
   function onGoogleSigIn(event){
     event.preventDefault()
     userLogInWithGoogle()
+    history.push('/')
+    
   }
 
   return (

@@ -25,7 +25,7 @@ const LoginPage = () => {
   async function onFormSubmit(event) {
     event.preventDefault()
     try{
-      const user = await userLogInWithMail(inputFields.email, inputFields.password)
+      await userLogInWithMail(inputFields.email, inputFields.password)
       history.push('/')
       setInputFields({
         email: '',
@@ -40,6 +40,7 @@ const LoginPage = () => {
   function onGoogleSigIn(event){
     event.preventDefault()
     userLogInWithGoogle()
+    history.push('/')
   }
 
   return (
