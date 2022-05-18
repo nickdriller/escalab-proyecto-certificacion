@@ -1,8 +1,9 @@
 import React from 'react'
+import Menu from '../../layout/Menu/Menu'
 
 const DashboardPage = () => {
   return (
-    <div>Dashboard</div>
+    <Menu/>
   )
 }
 

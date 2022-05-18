@@ -1,7 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
 import styles from './Menu.module.sass'
-import Button from '../../components/Button/Button'
 import UserAuthenticationContext from '../../contexts/UserAuthenticationContext'
 import { Link } from 'react-router-dom'
 

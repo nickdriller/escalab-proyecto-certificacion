@@ -1,11 +1,12 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import HomePage from '../pages/HomePage/HomePage'
-import LoginPage from '../pages/LoginPage/LoginPage'
-import SignUpPage from '../pages/SignUpPage/SignUpPage'
 import FourOhFourPage from '../pages/404Page/404Page'
 import UserAuthenticationContext from '../contexts/UserAuthenticationContext'
-import DashboardPage from '../pages/DashboardPage/DashboardPage'
-import React, { Fragment, useContext } from 'react'
+import React, { useContext } from 'react'
+
+const LazyDashboard = React.lazy( () => import('../pages/DashboardPage/DashboardPage') )
+const LazyLogin = React.lazy( () => import('../pages/LoginPage/LoginPage') )
+const LazySignup = React.lazy( () => import('../pages/SignUpPage/SignUpPage') )
 
 const Routes = () => {
   const {user} = useContext(UserAuthenticationContext)
@@ -15,13 +16,15 @@ const Routes = () => {
         
         <Route exact path='/' component={HomePage}/>
         {!user && 
-          <Fragment>
-            <Route path='/login' component={LoginPage}/>
-            <Route path='/signup' component={SignUpPage}/>
-          </Fragment>
+          <React.Suspense fallback={<h1>Cargando</h1>}>
+            <Route path='/login' component={LazyLogin}/>
+            <Route path='/signup' component={LazySignup}/>
+          </React.Suspense> 
         }
         {user && 
-          <Route path='/dashboard' component={DashboardPage}/>
+          <React.Suspense fallback={<h1>Cargando</h1>}>
+            <Route path='/dashboard' component={LazyDashboard}/>
+          </React.Suspense>
         }
         <Route path='*' component={FourOhFourPage} />
       </Switch>
