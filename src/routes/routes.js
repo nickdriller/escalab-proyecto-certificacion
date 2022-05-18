@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage/LoginPage'
 import SignUpPage from '../pages/SignUpPage/SignUpPage'
 import FourOhFourPage from '../pages/404Page/404Page'
 import UserAuthenticationContext from '../contexts/UserAuthenticationContext'
+import DashboardPage from '../pages/DashboardPage/DashboardPage'
 import React, { Fragment, useContext } from 'react'
 
 const Routes = () => {
@@ -16,8 +17,11 @@ const Routes = () => {
         {!user && 
           <Fragment>
             <Route path='/login' component={LoginPage}/>
-            <Route path='/sign-up' component={SignUpPage}/>
+            <Route path='/signup' component={SignUpPage}/>
           </Fragment>
+        }
+        {user && 
+          <Route path='/dashboard' component={DashboardPage}/>
         }
         <Route path='*' component={FourOhFourPage} />
       </Switch>

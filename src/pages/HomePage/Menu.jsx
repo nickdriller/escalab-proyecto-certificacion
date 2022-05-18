@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import styles from './Menu.module.sass'
 import Button from '../../components/Button/Button'
 import UserAuthenticationContext from '../../contexts/UserAuthenticationContext'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
   const {user, userLogOut} = useContext(UserAuthenticationContext)
@@ -35,8 +36,8 @@ const Menu = () => {
         {
           !user &&  
           <ul className={`${styles.menu__list} ${styles['menu__list--user']}`}>
-            <li><a href=''>sign up</a></li>
-            <li><a href=''>login</a></li>
+            <li><Link to='signup'>Signup</Link></li>
+            <li><Link to='login'>Login</Link></li>
           </ul>
         }
         {user && 
@@ -45,11 +46,7 @@ const Menu = () => {
             <button onClick={logOutUser}>
               Sal de la sesión
             </button>
-            <Button button={{
-                text: 'Dashboard',
-                type: 'submit'
-              }}
-            />
+            <Link to='dashboard'>Dashboard</Link>
           </div>
         }
        
